@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Sentence Corrector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="hero">
+            <div class="badge">AI Writing Assistant</div>
+
+            <h1>Write better sentences.</h1>
+
+            <p>
+                Fix grammar, spelling, punctuation and clarity with AI.
+            </p>
+        </header>
+
+
+        <section class="card">
+
+            <div class="section-head">
+                <label for="inputText">Your sentence</label>
+
+                <span id="charCount">
+                    0 characters
+                </span>
+            </div>
+
+
+            <textarea
+                id="inputText"
+                maxlength="5000"
+                placeholder="Type or paste your sentence here..."
+            ></textarea>
+
+
+            <div class="actions">
+
+                <button
+                    id="clearBtn"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+
+                <button
+                    id="correctBtn"
+                    type="button"
+                >
+                    Correct with AI ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <section class="card result-card">
+
+            <div class="section-head">
+
+                <h2>Corrected sentence</h2>
+
+                <button
+                    id="copyBtn"
+                    type="button"
+                    disabled
+                >
+                    Copy
+                </button>
+
+            </div>
+
+
+            <div
+                id="outputText"
+                class="output"
+            >
+                Your corrected sentence will appear here.
+            </div>
+
+
+            <div
+                id="explanation"
+                class="explanation hidden"
+            ></div>
+
+
+            <div
+                id="corrections"
+                class="corrections hidden"
+            ></div>
+
+
+            <p
+                id="status"
+                class="status"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </section>
+
+
+        <footer>
+            AI-assisted sentence correction
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
